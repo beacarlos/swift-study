@@ -53,5 +53,35 @@ func square(numbers: Int...) {
         print("\(number) raiz quadrada é \(number * number)")
     }
 }
-
 square(numbers: 1,2,3)
+
+
+// Throwing functions
+// tratamento de erros, voce pode propagar o erro.
+
+enum SenhaErro: Error {
+    case obvious
+}
+
+func verificacaoSenha(_ senha: String) throws -> Bool {
+    if password == "password" {
+        throw SenhaErro.obvious
+    }
+    return true
+}
+
+do {
+    try verificacaoSenha("password")
+    print("Quer ser hackeado oh, deixa de preguica") 
+} catch error {
+    print("")
+}
+
+//INOUT PARAMETERS
+//todo o parametro vem como constante e para modifica- lo dentro da função usamos o inout
+func doubleInPlace(number: inout Int) -> Int {
+   return number * 2
+}
+var myNumber = 10
+let valor: Int = doubleInPlace(number: &myNumber)
+print(valor)
