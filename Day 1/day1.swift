@@ -44,3 +44,11 @@ let taylor = "Swift"
 let album: String = "Sei la"
 var ano: Int = 1888
 
+
+// Crie uma constante com um tipo explícito Float e com um valor 4.
+let numeroPontoFlutuante: Float = 2.55 
+
+//Tente remover a conversão para o tipo String na última linha. Qual erro que aparece?
+let label = "A largura é "
+let width = 94
+let widthLabel = label + String(width)
